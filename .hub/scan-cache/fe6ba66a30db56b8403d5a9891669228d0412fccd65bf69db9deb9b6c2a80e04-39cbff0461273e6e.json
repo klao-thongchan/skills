@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:fe6ba66a30db56b8403d5a9891669228d0412fccd65bf69db9deb9b6c2a80e04",
+  "scanner_version": "skills-guard-v2",
+  "source": "official",
+  "source_url": "official/gaming/pokemon-player",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-09-10T03:19:24.698826+00:00",
+  "summary": "pokemon-player: clean scan, no threats detected",
+  "fresh": true
+}

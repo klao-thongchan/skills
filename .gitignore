@@ -1,0 +1,85 @@
+# ==============================================================================
+# Security & Secret Keys Protection for Skills
+# ==============================================================================
+
+# Environment files containing API keys and secrets
+.env
+.env.*
+.env.local
+.env.*.local
+*.env
+*.env.*
+!.env.example
+!.env.template
+
+# Secret, token, credential, and API key files
+*credentials*.json
+*secret*.json
+service_account*.json
+client_secret*.json
+token*.json
+*.token
+*.credentials
+*api_key*
+*apikey*
+*.secret
+*.secrets
+secrets.yaml
+secrets.yml
+secrets.json
+
+# Authentication & package manager credentials
+auth.json
+auth.lock
+.netrc
+.npmrc
+.pypirc
+
+# Private keys, certificates, and SSH credentials
+*.pem
+*.key
+*.crt
+*.cert
+*.pfx
+*.p12
+*.p8
+*.pkcs12
+*.kdbx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+
+# Backups and temporary files that may capture secrets
+*.bak
+*.bak.*
+*.backup
+*~
+*.swp
+*.swo
+
+# Local runtime state, logs, and database files
+*.db
+*.db-*
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.log
+*.log.*
+.curator_backups/
+.curator_ledger.jsonl
+.curator_state
+.usage.json
+.usage.json.lock
+
+# Cache & Build Artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+node_modules/
+.venv/
+venv/

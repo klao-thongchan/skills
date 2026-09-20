@@ -84,7 +84,7 @@
       "identifier": "official/mlops/training/axolotl",
       "trust_level": "builtin",
       "scan_verdict": "dangerous",
-      "content_hash": "sha256:9f2644cbceef2e97",
+      "content_hash": "sha256:9f1f72b3043c8998",
       "install_path": "mlops/training/axolotl",
       "files": [
         "SKILL.md",
@@ -95,8 +95,8 @@
       ],
       "metadata": {},
       "scan_provenance": {
-        "bundle_hash": "sha256:9f2644cbceef2e978f2e2a28a9f2b5cf4c36e714a70e9a507a45fcca39e2f455",
-        "scanner_version": "skills-guard-v2",
+        "bundle_hash": "sha256:9f1f72b3043c89985498bb34f1f35521c80f68c2d7bffc31b86d8d731655f335",
+        "scanner_version": "skills-guard-v5",
         "source": "official",
         "source_url": "official/mlops/training/axolotl",
         "verdict": "dangerous",
@@ -152,12 +152,12 @@
           "curl_pipe_shell",
           "unpinned_pip_install"
         ],
-        "scanned_at": "2026-09-10T03:19:21.242364+00:00",
+        "scanned_at": "2026-09-20T08:25:20.100411+00:00",
         "summary": "axolotl: dangerous — 5 finding(s) in supply_chain",
         "fresh": true
       },
-      "installed_at": "2026-09-10T03:19:21.255672+00:00",
-      "updated_at": "2026-09-10T03:19:21.255672+00:00"
+      "installed_at": "2026-09-20T08:25:20.119549+00:00",
+      "updated_at": "2026-09-20T08:25:20.119549+00:00"
     },
     "trl-fine-tuning": {
       "source": "official",
@@ -4027,7 +4027,7 @@
       "identifier": "official/creative/pixel-art",
       "trust_level": "builtin",
       "scan_verdict": "safe",
-      "content_hash": "sha256:37cb6e0295ed909f",
+      "content_hash": "sha256:2ca1513b0b9d467f",
       "install_path": "creative/pixel-art",
       "files": [
         "ATTRIBUTION.md",
@@ -4040,8 +4040,8 @@
       ],
       "metadata": {},
       "scan_provenance": {
-        "bundle_hash": "sha256:37cb6e0295ed909f064f1ef98d9c0fb54029ea47dd04744ef511259a189444a6",
-        "scanner_version": "skills-guard-v2",
+        "bundle_hash": "sha256:2ca1513b0b9d467f1e6cc883cfc9b3cbea35034885be32b7cb7b9cdb6de76536",
+        "scanner_version": "skills-guard-v5",
         "source": "official",
         "source_url": "official/creative/pixel-art",
         "verdict": "safe",
@@ -4061,7 +4061,7 @@
             "severity": "medium",
             "category": "supply_chain",
             "file": "SKILL.md",
-            "line": 192,
+            "line": 193,
             "match": "- Pillow (`pip install Pillow`)",
             "description": "pip install without version pinning"
           },
@@ -4088,12 +4088,12 @@
           "python_subprocess",
           "unpinned_pip_install"
         ],
-        "scanned_at": "2026-09-10T03:19:23.623352+00:00",
+        "scanned_at": "2026-09-20T08:25:20.314304+00:00",
         "summary": "pixel-art: safe — 4 finding(s) in execution, supply_chain",
         "fresh": true
       },
-      "installed_at": "2026-09-10T03:19:23.640403+00:00",
-      "updated_at": "2026-09-10T03:19:23.640403+00:00"
+      "installed_at": "2026-09-20T08:25:20.333314+00:00",
+      "updated_at": "2026-09-20T08:25:20.333314+00:00"
     },
     "minecraft-modpack-server": {
       "source": "official",
@@ -4195,27 +4195,27 @@
       "identifier": "official/gaming/pokemon-player",
       "trust_level": "builtin",
       "scan_verdict": "safe",
-      "content_hash": "sha256:fe6ba66a30db56b8",
+      "content_hash": "sha256:7c5ab083994e0a0c",
       "install_path": "gaming/pokemon-player",
       "files": [
         "SKILL.md"
       ],
       "metadata": {},
       "scan_provenance": {
-        "bundle_hash": "sha256:fe6ba66a30db56b8403d5a9891669228d0412fccd65bf69db9deb9b6c2a80e04",
-        "scanner_version": "skills-guard-v2",
+        "bundle_hash": "sha256:7c5ab083994e0a0c056f5172fd6a6c05ca3e0e07facabc38c92a8438de422623",
+        "scanner_version": "skills-guard-v5",
         "source": "official",
         "source_url": "official/gaming/pokemon-player",
         "verdict": "safe",
         "trust_level": "builtin",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-09-10T03:19:24.698826+00:00",
+        "scanned_at": "2026-09-20T08:25:20.450678+00:00",
         "summary": "pokemon-player: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-09-10T03:19:24.709615+00:00",
-      "updated_at": "2026-09-10T03:19:24.709615+00:00"
+      "installed_at": "2026-09-20T08:25:20.459851+00:00",
+      "updated_at": "2026-09-20T08:25:20.459851+00:00"
     },
     "dspy": {
       "source": "official",
@@ -4280,49 +4280,619 @@
       "source": "official",
       "identifier": "official/creative/comfyui",
       "trust_level": "builtin",
-      "scan_verdict": "backfilled",
-      "content_hash": "sha256:612d22cb79d98990",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:9600fcbda1773165",
       "install_path": "creative/comfyui",
       "files": [
         "SKILL.md",
-        "references/official-cli.md",
-        "references/rest-api.md",
-        "references/template-integrity.md",
         "references/workflow-format.md",
-        "scripts/_common.py",
-        "scripts/auto_fix_deps.py",
-        "scripts/check_deps.py",
-        "scripts/comfyui_setup.sh",
-        "scripts/extract_schema.py",
-        "scripts/fetch_logs.py",
-        "scripts/hardware_check.py",
-        "scripts/health_check.py",
-        "scripts/run_batch.py",
-        "scripts/run_workflow.py",
-        "scripts/ws_monitor.py",
-        "tests/README.md",
+        "references/official-cli.md",
+        "references/template-integrity.md",
+        "references/rest-api.md",
         "tests/conftest.py",
-        "tests/pytest.ini",
-        "tests/test_check_deps.py",
-        "tests/test_cloud_integration.py",
         "tests/test_common.py",
-        "tests/test_extract_schema.py",
+        "tests/test_cloud_integration.py",
+        "tests/pytest.ini",
         "tests/test_run_workflow.py",
-        "workflows/README.md",
-        "workflows/animatediff_video.json",
-        "workflows/flux_dev_txt2img.json",
-        "workflows/sd15_txt2img.json",
-        "workflows/sdxl_img2img.json",
+        "tests/README.md",
+        "tests/test_check_deps.py",
+        "tests/test_extract_schema.py",
         "workflows/sdxl_inpaint.json",
-        "workflows/sdxl_txt2img.json",
+        "workflows/sdxl_img2img.json",
+        "workflows/wan_video_t2v.json",
+        "workflows/sd15_txt2img.json",
         "workflows/upscale_4x.json",
-        "workflows/wan_video_t2v.json"
+        "workflows/README.md",
+        "workflows/sdxl_txt2img.json",
+        "workflows/flux_dev_txt2img.json",
+        "workflows/animatediff_video.json",
+        "scripts/fetch_logs.py",
+        "scripts/extract_schema.py",
+        "scripts/comfyui_setup.sh",
+        "scripts/check_deps.py",
+        "scripts/_common.py",
+        "scripts/hardware_check.py",
+        "scripts/ws_monitor.py",
+        "scripts/run_batch.py",
+        "scripts/auto_fix_deps.py",
+        "scripts/health_check.py",
+        "scripts/run_workflow.py"
       ],
-      "metadata": {
-        "backfilled_from": "optional-skills"
+      "metadata": {},
+      "scan_provenance": {
+        "bundle_hash": "sha256:9600fcbda17731657c4763c93b96ce054555f791189c8b3dc3ed331a96af339e",
+        "scanner_version": "skills-guard-v5",
+        "source": "official",
+        "source_url": "official/creative/comfyui",
+        "verdict": "dangerous",
+        "trust_level": "builtin",
+        "findings": [
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 108,
+            "match": "curl -s http://127.0.0.1:8188/system_stats 2>/dev/null && echo \"server: running\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 152,
+            "match": "# Local (defaults to http://127.0.0.1:8188)",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 406,
+            "match": "curl -s http://127.0.0.1:8188/system_stats      # health check",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 504,
+            "match": "curl -X POST \"http://127.0.0.1:8188/upload/image\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 539,
+            "match": "curl -s http://127.0.0.1:8188/queue | python -m json.tool",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 540,
+            "match": "curl -X POST http://127.0.0.1:8188/queue -d '{\"clear\": true}'    # cancel pending",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 541,
+            "match": "curl -X POST http://127.0.0.1:8188/interrupt                      # cancel running",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 542,
+            "match": "curl -X POST http://127.0.0.1:8188/free \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "SKILL.md",
+            "line": 559,
+            "match": "`curl http://127.0.0.1:8188/system_stats`.",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "curl_pipe_python",
+            "severity": "critical",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 539,
+            "match": "curl -s http://127.0.0.1:8188/queue | python -m json.tool",
+            "description": "curl piped to Python interpreter"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 166,
+            "match": "# Real-time progress via WebSocket (requires `pip install websocket-client`)",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 380,
+            "match": "pip install --user comfy-cli",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 420,
+            "match": "pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "git_clone",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "SKILL.md",
+            "line": 418,
+            "match": "git clone https://github.com/comfyanonymous/ComfyUI.git",
+            "description": "clones a git repository at runtime"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "references/official-cli.md",
+            "line": 13,
+            "match": "pip install --user comfy-cli      # fallback",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 11,
+            "match": "| Base URL | `http://127.0.0.1:8188` | `https://cloud.comfy.org` |",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 55,
+            "match": "curl -X POST \"http://127.0.0.1:8188/prompt\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 103,
+            "match": "curl -s \"http://127.0.0.1:8188/history\"          # all",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 104,
+            "match": "curl -s \"http://127.0.0.1:8188/history/{id}\"     # one prompt_id",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 129,
+            "match": "curl -s \"http://127.0.0.1:8188/view?filename=ComfyUI_00001_.png&subfolder=&type=output\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 147,
+            "match": "wscat -c \"ws://127.0.0.1:8188/ws?clientId=MY-UUID\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 187,
+            "match": "curl -X POST \"http://127.0.0.1:8188/upload/image\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 192,
+            "match": "curl -X POST \"http://127.0.0.1:8188/upload/mask\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 203,
+            "match": "curl -s \"http://127.0.0.1:8188/object_info\" | python3 -m json.tool",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 206,
+            "match": "curl -s \"http://127.0.0.1:8188/object_info/KSampler\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 209,
+            "match": "curl -s \"http://127.0.0.1:8188/models/checkpoints\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 210,
+            "match": "curl -s \"http://127.0.0.1:8188/models/loras\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 221,
+            "match": "curl -s \"http://127.0.0.1:8188/queue\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 224,
+            "match": "curl -X POST \"http://127.0.0.1:8188/queue\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 229,
+            "match": "curl -X POST \"http://127.0.0.1:8188/queue\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 234,
+            "match": "curl -X POST \"http://127.0.0.1:8188/interrupt\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 241,
+            "match": "curl -s \"http://127.0.0.1:8188/system_stats\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 244,
+            "match": "curl -X POST \"http://127.0.0.1:8188/free\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 256,
+            "match": "curl -X POST \"http://127.0.0.1:8188/manager/queue/install\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 261,
+            "match": "curl -s \"http://127.0.0.1:8188/manager/queue/status\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "references/rest-api.md",
+            "line": 264,
+            "match": "curl -X POST \"http://127.0.0.1:8188/manager/queue/install_model\" \\",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "curl_pipe_python",
+            "severity": "critical",
+            "category": "supply_chain",
+            "file": "references/rest-api.md",
+            "line": 203,
+            "match": "curl -s \"http://127.0.0.1:8188/object_info\" | python3 -m json.tool",
+            "description": "curl piped to Python interpreter"
+          },
+          {
+            "pattern_id": "python_environ_get_secret",
+            "severity": "medium",
+            "category": "exfiltration",
+            "file": "tests/conftest.py",
+            "line": 54,
+            "match": "return os.environ.get(\"COMFY_CLOUD_API_KEY\")",
+            "description": "reads secret via os.environ.get() (normal API-key access; informational)"
+          },
+          {
+            "pattern_id": "python_environ_get_secret",
+            "severity": "medium",
+            "category": "exfiltration",
+            "file": "tests/conftest.py",
+            "line": 59,
+            "match": "if os.environ.get(\"COMFY_CLOUD_API_KEY\"):",
+            "description": "reads secret via os.environ.get() (normal API-key access; informational)"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_common.py",
+            "line": 42,
+            "match": "assert is_cloud_host(\"http://127.0.0.1:8188\") is False",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_common.py",
+            "line": 49,
+            "match": "assert is_cloud_host(\"127.0.0.1:8188\") is False",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_common.py",
+            "line": 72,
+            "match": "assert resolve_url(\"http://127.0.0.1:8188\", \"/prompt\") == \"http://127.0.0.1:8188/prompt\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_common.py",
+            "line": 88,
+            "match": "assert resolve_url(\"http://127.0.0.1:8188/\", \"/prompt\") == \"http://127.0.0.1:8188/prompt\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "system_passwd_access",
+            "severity": "critical",
+            "category": "traversal",
+            "file": "tests/test_common.py",
+            "line": 251,
+            "match": "safe_path_join(tmp_path, \"/etc/passwd\")",
+            "description": "references system password files"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_run_workflow.py",
+            "line": 180,
+            "match": "assert r.host == \"http://127.0.0.1:8188\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "tests/test_run_workflow.py",
+            "line": 200,
+            "match": "assert url == \"http://127.0.0.1:8188/prompt\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "echo_pipe_exec",
+            "severity": "critical",
+            "category": "obfuscation",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 119,
+            "match": "VERDICT=\"$(echo \"$HW_JSON\" | python3 -c 'import sys,json; print(json.load(sys.stdin).get(\"verdict\",\"\"))')\"",
+            "description": "echo piped to interpreter for execution"
+          },
+          {
+            "pattern_id": "echo_pipe_exec",
+            "severity": "critical",
+            "category": "obfuscation",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 120,
+            "match": "FLAG=\"$(echo \"$HW_JSON\"   | python3 -c 'import sys,json; print(json.load(sys.stdin).get(\"comfy_cli_flag\") or \"\")')\"",
+            "description": "echo piped to interpreter for execution"
+          },
+          {
+            "pattern_id": "curl_pipe_python",
+            "severity": "critical",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 240,
+            "match": "curl -fsS \"http://127.0.0.1:$PORT/system_stats\" | python3 -m json.tool 2>/dev/null || true",
+            "description": "curl piped to Python interpreter"
+          },
+          {
+            "pattern_id": "curl_pipe_python",
+            "severity": "critical",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 262,
+            "match": "curl -fsS \"http://127.0.0.1:$PORT/system_stats\" | python3 -m json.tool 2>/dev/null || true",
+            "description": "curl piped to Python interpreter"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 173,
+            "match": "log \"Neither pipx nor uvx found. Falling back to pip install --user…\"",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 175,
+            "match": "if ! pip install --user comfy-cli >>\"$LOG_FILE\" 2>&1; then",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 177,
+            "match": "log \"pip install --user failed. Retrying with --break-system-packages…\"",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/comfyui_setup.sh",
+            "line": 178,
+            "match": "pip install --user --break-system-packages comfy-cli >>\"$LOG_FILE\" 2>&1 || {",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "hardcoded_ip_port",
+            "severity": "medium",
+            "category": "network",
+            "file": "scripts/_common.py",
+            "line": 43,
+            "match": "DEFAULT_LOCAL_HOST = \"http://127.0.0.1:8188\"",
+            "description": "hardcoded IP address with port"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/_common.py",
+            "line": 463,
+            "match": "\"Install with: pip install requests\"",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "python_subprocess",
+            "severity": "medium",
+            "category": "execution",
+            "file": "scripts/hardware_check.py",
+            "line": 56,
+            "match": "out = subprocess.run(",
+            "description": "Python subprocess execution"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/ws_monitor.py",
+            "line": 130,
+            "match": "\"install\": \"pip install websocket-client\",",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "python_subprocess",
+            "severity": "medium",
+            "category": "execution",
+            "file": "scripts/auto_fix_deps.py",
+            "line": 54,
+            "match": "proc = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='replace', check=False)",
+            "description": "Python subprocess execution"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/auto_fix_deps.py",
+            "line": 129,
+            "match": "\"reason\": \"comfy-cli not on PATH; install with `pip install comfy-cli` or `pipx install comfy-cli`\",",
+            "description": "pip install without version pinning"
+          },
+          {
+            "pattern_id": "unpinned_pip_install",
+            "severity": "medium",
+            "category": "supply_chain",
+            "file": "scripts/health_check.py",
+            "line": 42,
+            "match": "\"hint\": \"Install with: pipx install comfy-cli (or `pip install comfy-cli`)\",",
+            "description": "pip install without version pinning"
+          }
+        ],
+        "rules": [
+          "curl_pipe_python",
+          "echo_pipe_exec",
+          "git_clone",
+          "hardcoded_ip_port",
+          "python_environ_get_secret",
+          "python_subprocess",
+          "system_passwd_access",
+          "unpinned_pip_install"
+        ],
+        "scanned_at": "2026-09-20T08:25:20.794295+00:00",
+        "summary": "comfyui: dangerous — 61 finding(s) in execution, exfiltration, network, obfuscation, supply_chain, traversal",
+        "fresh": true
       },
-      "installed_at": "2026-09-02T00:15:50.609141+00:00",
-      "updated_at": "2026-09-02T00:15:50.609141+00:00"
+      "installed_at": "2026-09-20T08:25:20.840386+00:00",
+      "updated_at": "2026-09-20T08:25:20.840386+00:00"
     },
     "rss-feeds": {
       "source": "official",

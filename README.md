@@ -9,20 +9,19 @@ Skills provide structured, step-by-step guidance, decision rubrics, tool recipes
 ## 📑 Table of Contents
 
 1. [Skill Architecture & Conventions](#-skill-architecture--conventions)
-2. [Workflow & Engineering Skills (Matt Pocock Suite)](#-workflow--engineering-skills)
-3. [Software Development & Debugging](#-software-development--debugging)
+2. [Workflow & Engineering Skills (Matt Pocock Suite & System Routing)](#-workflow--engineering-skills)
+3. [Software Development, Debugging & GitHub](#-software-development-debugging--github)
 4. [Autonomous AI & Multi-Agent Operations](#-autonomous-ai--multi-agent-operations)
 5. [MLOps & AI Engineering](#-mlops--ai-engineering)
-6. [OpenClaw & Firecrawl Web Scraping](#-openclaw--firecrawl-web-scraping)
-7. [Productivity & Office Automation](#-productivity--office-automation)
-8. [Creative, Design & Media](#-creative-design--media)
-9. [DevOps, Systems & Infrastructure](#-devops-systems--infrastructure)
-10. [Social Media, Communication & Email](#-social-media-communication--email)
-11. [Desktop, Theming & UI](#-desktop-theming--ui)
-12. [MCP (Model Context Protocol) & Tooling](#-mcp--tooling)
-13. [Gaming & Leisure](#-gaming--leisure)
-14. [Security & Red Teaming](#-security--red-teaming)
-15. [How to Author a New Skill](#-how-to-author-a-new-skill)
+6. [Productivity & Office Automation](#-productivity--office-automation)
+7. [Creative, Design & Media](#-creative-design--media)
+8. [DevOps, Systems & Infrastructure](#-devops-systems--infrastructure)
+9. [Social Media & Communication](#-social-media--communication)
+10. [Desktop, Theming & UI](#-desktop-theming--ui)
+11. [MCP (Model Context Protocol) & Tooling](#-mcp--tooling)
+12. [Security & Red Teaming](#-security--red-teaming)
+13. [Archived Skills (`.archive/`)](#-archived-skills)
+14. [How to Author a New Skill](#-how-to-author-a-new-skill)
 
 ---
 
@@ -52,13 +51,17 @@ description: Clear, concise summary of what this skill does and when to activate
 
 ## 🚀 Workflow & Engineering Skills
 
-These skills (aliased at root from `.agents/skills/`) drive structured software design, specification, stress-testing, implementation, and review.
+These skills (aliased at root from `.agents/skills/`) drive structured software design, specification, stress-testing, implementation, research, and review.
 
 | Skill | Purpose | When to Use / Triggers |
 |---|---|---|
 | [`ask-matt`](file:///Users/klao-pro/.hermes/skills/ask-matt) | Router over engineering skills | When unsure which workflow or skill fits your current development situation. |
+| [`find-skills`](file:///Users/klao-pro/.hermes/skills/find-skills) | Agent skill discovery | Discovers and installs skills from the open agent skills ecosystem when new capabilities are needed. |
+| [`research`](file:///Users/klao-pro/.hermes/skills/research) | Primary source research | Investigates questions against primary sources and official documentation, saving cited findings. |
+| [`setup-matt-pocock-skills`](file:///Users/klao-pro/.hermes/skills/setup-matt-pocock-skills) | Engineering workflow config | Scaffolds and configures per-repo settings assumed by bundled engineering workflows. |
 | [`to-spec`](file:///Users/klao-pro/.hermes/skills/to-spec) | Spec writer | Converts a conversation or feature idea into a formal spec and issues. |
 | [`to-tickets`](file:///Users/klao-pro/.hermes/skills/to-tickets) | Task breakdown | Breaks a plan or specification down into dependency-aware tracer-bullet tickets. |
+| [`to-questionnaire`](file:///Users/klao-pro/.hermes/skills/to-questionnaire) | Gap discovery questionnaire | Turns an incomplete decision into a structured questionnaire for external stakeholders. |
 | [`wayfinder`](file:///Users/klao-pro/.hermes/skills/wayfinder) | Multi-session roadmapping | Maps multi-session work into discrete decision tickets until the route is clear. |
 | [`grill-me`](file:///Users/klao-pro/.hermes/skills/grill-me) | Relentless plan interrogation | Stress-tests a proposal or design through an interactive interview before coding. |
 | [`grill-with-docs`](file:///Users/klao-pro/.hermes/skills/grill-with-docs) | Interrogation with ADR generation | Conducts an in-depth interview to sharpen plans and creates ADRs and glossaries. |
@@ -82,9 +85,9 @@ These skills (aliased at root from `.agents/skills/`) drive structured software 
 
 ---
 
-## 🛠️ Software Development & Debugging
+## 🛠️ Software Development, Debugging & GitHub
 
-Location: [`software-development/`](file:///Users/klao-pro/.hermes/skills/software-development)
+Location: [`software-development/`](file:///Users/klao-pro/.hermes/skills/software-development) & [`github/`](file:///Users/klao-pro/.hermes/skills/github)
 
 | Skill | Path | Purpose |
 |---|---|---|
@@ -94,10 +97,11 @@ Location: [`software-development/`](file:///Users/klao-pro/.hermes/skills/softwa
 | **software-quality-workflows** | [`software-development/software-quality-workflows/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/software-quality-workflows/SKILL.md) | Runs dedicated QA passes, dogfooding checklists, and code simplification audits. |
 | **debugger-tooling** | [`software-development/debugger-tooling/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/debugger-tooling/SKILL.md) | Attaches runtime debuggers (`debugpy`, `pdb`, Node.js inspector / Chrome DevTools). |
 | **debugging-hermes-tui-commands** | [`software-development/debugging-hermes-tui-commands/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/debugging-hermes-tui-commands/SKILL.md) | Debugs Hermes TUI slash commands, Gateway WebSocket bridge, and Ink UI. |
-| **inspecting-hermes-desktop-dom** | [`software-development/inspecting-hermes-desktop-dom/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/inspecting-hermes-desktop-dom/SKILL.md) | Connects via Chrome DevTools Protocol (CDP) to inspect and debug Hermes Desktop DOM/CSS. |
 | **hermes-s6-container-supervision** | [`software-development/hermes-s6-container-supervision/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/hermes-s6-container-supervision/SKILL.md) | Modifies and debugs the `s6-overlay` process supervision tree in Hermes Docker images. |
 | **steipete-coding-skill** | [`software-development/steipete-coding-skill/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/steipete-coding-skill/SKILL.md) | Coding style and conventions inspired by @steipete for rapid, clean execution. |
-| **github** | [`software-development/github/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/github/SKILL.md) | Manages GitHub PRs, issues, code reviews, and repo operations via `gh` CLI. |
+| **github** | [`software-development/github/SKILL.md`](file:///Users/klao-pro/.hermes/skills/software-development/github/SKILL.md) | Consolidated GitHub CLI suite: PR lifecycle, issue delivery, code review, repos, and CI. |
+| **github-issue-to-pr** | [`github/github-issue-to-pr/SKILL.md`](file:///Users/klao-pro/.hermes/skills/github/github-issue-to-pr/SKILL.md) | Carries a GitHub issue all the way to a verified pull request with verified CI status. |
+| **github-workflows** | [`github/github-workflows/SKILL.md`](file:///Users/klao-pro/.hermes/skills/github/github-workflows/SKILL.md) | Operates GitHub issues, PR creation/management, CI tracking, and release management. |
 
 ---
 
@@ -112,7 +116,6 @@ Location: [`autonomous-ai-agents/`](file:///Users/klao-pro/.hermes/skills/autono
 | **antigravity-cli** | [`autonomous-ai-agents/antigravity-cli/SKILL.md`](file:///Users/klao-pro/.hermes/skills/autonomous-ai-agents/antigravity-cli/SKILL.md) | Integrates with Google Antigravity CLI (`agy`) for multi-agent workflows. |
 | **hermes-agent** | [`autonomous-ai-agents/hermes-agent/SKILL.md`](file:///Users/klao-pro/.hermes/skills/autonomous-ai-agents/hermes-agent/SKILL.md) | Core internal agent protocols, dispatch mechanisms, and background worker spawning. |
 | **merge-reconciler** | [`autonomous-ai-agents/merge-reconciler/SKILL.md`](file:///Users/klao-pro/.hermes/skills/autonomous-ai-agents/merge-reconciler/SKILL.md) | Automated reconciliation and resolution of concurrent agent changes and git branches. |
-| **computer-use** | [`autonomous-ai-agents/computer-use/SKILL.md`](file:///Users/klao-pro/.hermes/skills/autonomous-ai-agents/computer-use/SKILL.md) | OS-level GUI automation via mouse/keyboard control and screenshot recognition. |
 
 ---
 
@@ -147,44 +150,20 @@ Location: [`mlops/`](file:///Users/klao-pro/.hermes/skills/mlops)
 
 ---
 
-## 🕷️ OpenClaw & Firecrawl Web Scraping
-
-Location: [`openclaw-imports/`](file:///Users/klao-pro/.hermes/skills/openclaw-imports)
-
-Comprehensive suite for web crawling, AI web search, content extraction, and browser automation via Firecrawl.
-
-| Skill | Path | Purpose |
-|---|---|---|
-| **firecrawl** | [`openclaw-imports/firecrawl/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl/SKILL.md) | Central router for all Firecrawl scraping, crawling, search, and extraction tasks. |
-| **firecrawl-agent** | [`openclaw-imports/firecrawl-agent/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-agent/SKILL.md) | Extracts complex structured schemas across multi-page web applications. |
-| **firecrawl-scrape** | [`openclaw-imports/firecrawl-scrape/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-scrape/SKILL.md) | Clean markdown extraction from specific URLs. |
-| **firecrawl-crawl** | [`openclaw-imports/firecrawl-crawl/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-crawl/SKILL.md) | Recursive deep crawling of full websites or documentation subtrees. |
-| **firecrawl-search** | [`openclaw-imports/firecrawl-search/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-search/SKILL.md) | Web search that returns cleaned, LLM-ready markdown results. |
-| **firecrawl-map** | [`openclaw-imports/firecrawl-map/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-map/SKILL.md) | Fast URL discovery and sitemap generation for a target domain. |
-| **firecrawl-interact** | [`openclaw-imports/firecrawl-interact/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-interact/SKILL.md) | Performs clicks, form inputs, pagination, and auth logins on dynamic pages. |
-| **firecrawl-download** | [`openclaw-imports/firecrawl-download/SKILL.md`](file:///Users/klao-pro/.hermes/skills/openclaw-imports/firecrawl-download/SKILL.md) | Downloads web pages and site sections to local files. |
-| **firecrawl-build-*** | `openclaw-imports/firecrawl-build-*/SKILL.md` | Integration skills for embedding Firecrawl search/scrape/interact SDKs into codebases. |
-
----
-
 ## 📈 Productivity & Office Automation
 
 Location: [`productivity/`](file:///Users/klao-pro/.hermes/skills/productivity)
 
 | Skill | Path | Purpose |
 |---|---|---|
-| **docx** | [`productivity/docx/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/docx/SKILL.md) | Creates, edits, formats, templates, and parses Microsoft Word `.docx` documents. |
-| **xlsx** | [`productivity/xlsx/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/xlsx/SKILL.md) | Reads, modifies, and generates Excel `.xlsx` spreadsheets and CSV data. |
-| **pdf** | [`productivity/pdf/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/pdf/SKILL.md) | Handles PDF generation, OCR extraction, form filling, and page merging. |
+| **document-office-automation** | [`productivity/document-office-automation/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/document-office-automation/SKILL.md) | Unified office suite: PDF/OCR extraction, edits, PowerPoint (`.pptx`) decks, and meeting artifact processing. |
 | **linear** | [`productivity/linear/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/linear/SKILL.md) | Manages Linear projects, cycles, and issues via GraphQL API. |
 | **box** | [`productivity/box/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/box/SKILL.md) | Manages Box cloud storage files, shared links, metadata, and folders. |
 | **document-to-action-items** | [`productivity/document-to-action-items/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/document-to-action-items/SKILL.md) | Extracts actionable obligations, deadlines, and owners from documents. |
-| **meeting-action-items** | [`productivity/meeting-action-items/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/meeting-action-items/SKILL.md) | Converts meeting transcripts and notes into structured decisions and action items. |
 | **obsidian-vault-automation** | [`productivity/obsidian-vault-automation/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/obsidian-vault-automation/SKILL.md) | Automates vault maintenance, daily notes, and note linking in Obsidian. |
 | **obsidian-indexing-automation** | [`productivity/obsidian-indexing-automation/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/obsidian-indexing-automation/SKILL.md) | Indexes, categorizes, and tags notes in Obsidian vaults. |
 | **daily-story-memo** | [`productivity/daily-story-memo/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/daily-story-memo/SKILL.md) | Compiles daily Telegram/Hermes story memos and activity digests. |
 | **periodic-story-synthesis** | [`productivity/periodic-story-synthesis/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/periodic-story-synthesis/SKILL.md) | Synthesizes weekly, monthly, and annual story memos into executive summaries. |
-| **weekly-review-planning** | [`productivity/weekly-review-planning/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/weekly-review-planning/SKILL.md) | Conducts weekly productivity reviews, reviews stalled work, and plans the next sprint. |
 | **diagmemo** | [`productivity/diagmemo/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/diagmemo/SKILL.md) | Saves and indexes Telegram diagnostic memos into Obsidian. |
 | **session-librarian** | [`productivity/session-librarian/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/session-librarian/SKILL.md) | Indexes, searches, categorizes, and prunes Hermes agent session history. |
 | **product-price-monitor** | [`productivity/product-price-monitor/SKILL.md`](file:///Users/klao-pro/.hermes/skills/productivity/product-price-monitor/SKILL.md) | Monitors e-commerce product or flight prices and triggers alerts. |
@@ -226,13 +205,12 @@ Location: [`creative/`](file:///Users/klao-pro/.hermes/skills/creative) & [`medi
 
 ---
 
-## 🌐 Social Media, Communication & Email
+## 🌐 Social Media & Communication
 
 | Skill | Path | Purpose |
 |---|---|---|
 | **reddit-reading** | [`social-media/reddit-reading/SKILL.md`](file:///Users/klao-pro/.hermes/skills/social-media/reddit-reading/SKILL.md) | Reads subreddits, posts, threads, and comments without requiring a browser. |
 | **xitter** | [`social-media/xitter/SKILL.md`](file:///Users/klao-pro/.hermes/skills/social-media/xitter/SKILL.md) | Operates X/Twitter timelines, drafting posts, reading mentions, and direct messages. |
-| **email-inbox-triage** | [`email/email-inbox-triage/SKILL.md`](file:///Users/klao-pro/.hermes/skills/email/email-inbox-triage/SKILL.md) | Categorizes incoming emails, drafts replies, and extracts high-priority action items. |
 
 ---
 
@@ -256,21 +234,30 @@ Location: [`mcp/`](file:///Users/klao-pro/.hermes/skills/mcp)
 
 ---
 
-## 🎮 Gaming & Leisure
-
-| Skill | Path | Purpose |
-|---|---|---|
-| **minecraft-modpack-server** | [`gaming/minecraft-modpack-server/SKILL.md`](file:///Users/klao-pro/.hermes/skills/gaming/minecraft-modpack-server/SKILL.md) | Provisions, configures, and manages Minecraft modded server instances. |
-| **pokemon-player** | [`gaming/pokemon-player/SKILL.md`](file:///Users/klao-pro/.hermes/skills/gaming/pokemon-player/SKILL.md) | Plays and strategizes Game Boy / emulator Pokémon game runs. |
-| **find-nearby** | [`leisure/find-nearby/SKILL.md`](file:///Users/klao-pro/.hermes/skills/leisure/find-nearby/SKILL.md) | Discovers local spots, restaurants, events, and points of interest. |
-
----
-
 ## 🛡️ Security & Red Teaming
 
 | Skill | Path | Purpose |
 |---|---|---|
 | **godmode** | [`red-teaming/godmode/SKILL.md`](file:///Users/klao-pro/.hermes/skills/red-teaming/godmode/SKILL.md) | LLM red-teaming, jailbreak research, and adversarial safety evaluations. |
+
+---
+
+## 📦 Archived Skills
+
+Location: [`.archive/`](file:///Users/klao-pro/.hermes/skills/.archive)
+
+Legacy or deprecated skills that were archived from active runtime dispatch are preserved in `.archive/` for reference and historical retrieval:
+
+| Skill | Path | Archive Note |
+|---|---|---|
+| **computer-use** | [`.archive/computer-use/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/computer-use/SKILL.md) | OS GUI mouse/keyboard automation via screenshot recognition. |
+| **docx** | [`.archive/docx/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/docx/SKILL.md) | Microsoft Word document editing (superseded by `document-office-automation`). |
+| **email-inbox-triage** | [`.archive/email-inbox-triage/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/email-inbox-triage/SKILL.md) | Email inbox triage and draft responses. |
+| **inspecting-hermes-desktop-dom** | [`.archive/inspecting-hermes-desktop-dom/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/inspecting-hermes-desktop-dom/SKILL.md) | CDP DOM inspection for Hermes Desktop client. |
+| **meeting-action-items** | [`.archive/meeting-action-items/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/meeting-action-items/SKILL.md) | Meeting action items extraction (superseded by `document-office-automation`). |
+| **pdf** | [`.archive/pdf/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/pdf/SKILL.md) | PDF operations and OCR (superseded by `document-office-automation`). |
+| **weekly-review-planning** | [`.archive/weekly-review-planning/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/weekly-review-planning/SKILL.md) | Weekly productivity planning routines. |
+| **xlsx** | [`.archive/xlsx/SKILL.md`](file:///Users/klao-pro/.hermes/skills/.archive/xlsx/SKILL.md) | Excel spreadsheet manipulation (superseded by `document-office-automation`). |
 
 ---
 

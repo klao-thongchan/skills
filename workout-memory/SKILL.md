@@ -96,7 +96,7 @@ When the user logs a workout, parse and save:
 - rpe
 - pain
 - notes
-- cardio-specific fields when present, such as incline, pace, duration, distance, and average_heart_rate_bpm
+- cardio-specific fields when present, such as incline, speed_kmh, duration, distance, and average_heart_rate_bpm
 
 For unilateral free-weight movements where the user gives side-specific effort, store RPE as a mapping instead of flattening it:
 

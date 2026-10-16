@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:fb6408b281e83dc5f2854e297c91906f866a2d00b3fb4d6c9b57a5dd153ece4b",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-outcome-oriented-execution/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-outcome-oriented-execution/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:32:48.652565+00:00",
+  "summary": "principle-outcome-oriented-execution: clean scan, no threats detected",
+  "fresh": true
+}

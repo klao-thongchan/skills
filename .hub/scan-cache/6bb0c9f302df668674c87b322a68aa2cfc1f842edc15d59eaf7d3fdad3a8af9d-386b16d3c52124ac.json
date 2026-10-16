@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:6bb0c9f302df668674c87b322a68aa2cfc1f842edc15d59eaf7d3fdad3a8af9d",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:32:13.429516+00:00",
+  "summary": "principle-migrate-callers-then-delete-legacy-apis: clean scan, no threats detected",
+  "fresh": true
+}

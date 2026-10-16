@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:f795572d031a4944d87a9395adb8cb133f2159be486dfb251b32ac3d4abc029b",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/technical-writing/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/technical-writing/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:35:41.454314+00:00",
+  "summary": "technical-writing: clean scan, no threats detected",
+  "fresh": true
+}

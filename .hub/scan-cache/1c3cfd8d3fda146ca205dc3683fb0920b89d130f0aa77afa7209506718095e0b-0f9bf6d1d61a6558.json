@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:1c3cfd8d3fda146ca205dc3683fb0920b89d130f0aa77afa7209506718095e0b",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-subtract-before-you-add/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-subtract-before-you-add/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:33:33.310596+00:00",
+  "summary": "principle-subtract-before-you-add: clean scan, no threats detected",
+  "fresh": true
+}

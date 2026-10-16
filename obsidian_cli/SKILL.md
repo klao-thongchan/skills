@@ -27,10 +27,14 @@ Target vault:
 This vault uses the following top-level structure:
 
     00_SYSTEM
-    10_Preordic
+    10_Periodic
+    11_Periodic_Archive
     20_Articles
+    21_Articles_Archive
     30_Area
     31_Technical_Area
+    32_Techincal_Archive
+    33_Commercial_Thesis
     60_Workflows
     70_Prompts
     80_Templates
@@ -196,24 +200,26 @@ Use this folder for:
 
 Do not put raw article summaries here unless they become system doctrine.
 
-### 10_Preordic
+### 10_Periodic (formerly 10_Preordic)
 
 Purpose:
 
-- daily notes
+- daily notes (`10_Periodic/2026_Periodic/01_Daily`)
 - weekly reviews
-- monthly reviews
+- monthly reviews (`10_Periodic/2026_Periodic/02_Monthly`)
+- quarterly reviews (`10_Periodic/2026_Periodic/03_Quarterly`)
+- yearly reviews (`10_Periodic/2026_Periodic/04_Yearly`)
 - periodic syntheses
 - retrospectives
 - recurring vault audits
 
 Use this folder for:
 
-- `10_Preordic/Hermes Vault Learning Baseline - YYYY-MM-DD.md`
-- `10_Preordic/Weekly Review - YYYY-WW.md`
-- `10_Preordic/Monthly Review - YYYY-MM.md`
+- `10_Periodic/Hermes Vault Learning Baseline - YYYY-MM-DD.md`
+- `10_Periodic/Weekly Review - YYYY-WW.md`
+- `10_Periodic/Monthly Review - YYYY-MM.md`
 
-If the folder name is actually a typo and Klao later renames it to `10_Periodic`, adapt only after confirming the real filesystem folder.
+Historical archives live in `11_Periodic_Archive/`.
 
 ### 20_Articles
 
@@ -231,6 +237,35 @@ Use this folder for:
 - annotated source notes
 - extraction from NotebookLM outputs
 - article synthesis notes
+
+Folder structure convention:
+
+- Organize articles under year subdirectories: `20_Articles/<YYYY>_Article/` (e.g. `20_Articles/2026_Article/`). Do not place loose notes directly in the `20_Articles/` root.
+
+Standard frontmatter and header schema for articles:
+
+```markdown
+---
+title: "Article Title"
+description: >-
+  Concise plain-language summary of the thesis or scope.
+date: 'YYYY-MM-DD'
+categories:
+  - Category1
+  - Category2
+keywords:
+  - keyword1
+  - keyword2
+slug: ''
+---
+
+Created date: [[YYYY-MM-DD]]
+Created month: [[YYYY-MM]]
+Created quarter: [[YYYY-Q#]]
+Created year: [[YYYY]]
+
+Tags: [[Tag Name]] [[Another Tag]]
+```
 
 Default article transformation format:
 
@@ -266,8 +301,21 @@ Purpose:
 - business models
 - career
 - research domains
+- conversational captures and chat Q&A research (`30_Area/chatGPT Conversations/`)
 
-Use this folder for evergreen conceptual notes and area-level MOCs.
+Use this folder for evergreen conceptual notes, area-level MOCs, and captured chat conversations.
+
+#### Chat Conversation & Q&A Note Standard
+
+When turning conversational Q&A, travel guides, or topic discussions into vault notes under `30_Area/chatGPT Conversations/`:
+Prepend the standard vault temporal wikilink header:
+
+```markdown
+Created date: [[YYYY-MM-DD]]
+Created month: [[YYYY-MM]]
+Created quarter: [[YYYY-Q#]]
+Created year: [[YYYY]]
+```
 
 Examples:
 
@@ -275,6 +323,7 @@ Examples:
 - `30_Area/Behavioral Economics.md`
 - `30_Area/Game Publishing.md`
 - `30_Area/Market Narrative Design.md`
+- `30_Area/chatGPT Conversations/Baltic Countries Travel Guide.md`
 
 ### 31_Technecial_Area / 31_Technical_Area
 
@@ -558,9 +607,9 @@ Create a periodic review note:
 
     cd "$VAULT_PATH" && obsidian create path="10_Preordic/Weekly Review - YYYY-WW.md" content="# Weekly Review - YYYY-WW\n\nContent here." open
 
-Create an article synthesis note:
+Create an article synthesis note (in the current year subfolder):
 
-    cd "$VAULT_PATH" && obsidian create path="20_Articles/Article Title.md" content="# Article Title\n\nContent here." open
+    cd "$VAULT_PATH" && obsidian create path="20_Articles/2026_Article/Article Title.md" content="# Article Title\n\nContent here." open
 
 Create an area note:
 
@@ -616,9 +665,10 @@ When creating or updating notes, route content by function:
 | Content Type | Destination |
 |---|---|
 | Vault rules, indexes, MOCs, taxonomy, agent protocol | `00_SYSTEM/` |
-| Daily, weekly, monthly, periodic review | `10_Preordic/` |
+| Daily, weekly, monthly, periodic review | `10_Periodic/` |
 | Raw articles, article summaries, source notes | `20_Articles/` |
 | Product, behavioral, strategy, marketing, game publishing domains | `30_Area/` |
+| Conversational Q&A captures, chat travel guides, ad-hoc Q&A notes | `30_Area/chatGPT Conversations/` |
 | Hermes, Codex, AI agents, n8n, Firebase, OpenAI, technical systems | `31_Technical_Area/` |
 | Repeatable execution loops and SOPs | `60_Workflows/` |
 | Reusable prompts and Telegram command templates | `70_Prompts/` |
@@ -699,13 +749,16 @@ Example MOC destinations:
 
 ## Article Processing Workflow
 
-When Klao gives an article:
+When Klao provides an article or requests an article written into the vault:
 
-1. Treat the raw article as source material.
-2. Store or synthesize under `20_Articles/`.
-3. Extract durable concepts into `30_Area/` or `31_Technical_Area/` only if requested.
-4. Create workflows in `60_Workflows/` only when the article contains repeatable execution logic.
-5. Create prompts in `70_Prompts/` only when the article contains reusable prompt patterns.
+1. Route into `20_Articles/<YYYY>_Article/` matching the current year (e.g. `20_Articles/2026_Article/`).
+2. Verify target note path does not already exist before creating; prompt before overwriting.
+3. Prepend standard YAML frontmatter (`title`, `description`, `date`, `categories`, `keywords`, `slug`) and temporal wikilink breadcrumbs (`Created date: [[...]]`, `Created month: [[...]]`, `Created quarter: [[...]]`, `Created year: [[...]]`, `Tags: [[...]]`).
+4. Treat raw articles as source material; synthesize with concrete mechanisms, empirical evidence, and clear structural implications.
+5. Extract durable concepts into `30_Area/` or `31_Technical_Area/` only if requested.
+6. Create workflows in `60_Workflows/` only when the article contains repeatable execution logic.
+7. Create prompts in `70_Prompts/` only when the article contains reusable prompt patterns.
+8. Verify creation by checking note outline or reading lines via Obsidian CLI (`obsidian outline path="..."` or `obsidian read path="..."`).
 
 Default article note structure:
 

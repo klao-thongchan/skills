@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:24b8bb389ddc322eaabd380e3c97ed3aa59af875542a1438a10617fb961beb93",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-guard-the-context-window/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-guard-the-context-window/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:47.084278+00:00",
+  "summary": "principle-guard-the-context-window: clean scan, no threats detected",
+  "fresh": true
+}

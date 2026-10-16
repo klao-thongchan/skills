@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:2df5ffdecdb460d386eb8313c2d228864271dcaec25d1dfb7ebcc62c9803cba3",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-exhaust-the-design-space/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-exhaust-the-design-space/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:01.796684+00:00",
+  "summary": "principle-exhaust-the-design-space: clean scan, no threats detected",
+  "fresh": true
+}

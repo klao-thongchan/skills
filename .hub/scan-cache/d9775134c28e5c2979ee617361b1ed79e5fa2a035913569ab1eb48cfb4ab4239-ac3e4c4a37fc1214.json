@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:d9775134c28e5c2979ee617361b1ed79e5fa2a035913569ab1eb48cfb4ab4239",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-explain-the-number/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-explain-the-number/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:20.231482+00:00",
+  "summary": "principle-explain-the-number: clean scan, no threats detected",
+  "fresh": true
+}

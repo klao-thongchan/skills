@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:414023ac58aec4694179eac0dfe11bf40ea52c0f93518f6020770f294248edb2",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-prove-it-works/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-prove-it-works/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:32:57.304873+00:00",
+  "summary": "principle-prove-it-works: clean scan, no threats detected",
+  "fresh": true
+}

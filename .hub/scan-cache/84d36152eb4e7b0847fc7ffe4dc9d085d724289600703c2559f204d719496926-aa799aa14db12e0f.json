@@ -1,0 +1,25 @@
+{
+  "bundle_hash": "sha256:84d36152eb4e7b0847fc7ffe4dc9d085d724289600703c2559f204d719496926",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/typescript-best-practices/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/typescript-best-practices/SKILL.md",
+  "verdict": "caution",
+  "trust_level": "community",
+  "findings": [
+    {
+      "pattern_id": "inline_shell_exec",
+      "severity": "high",
+      "category": "execution",
+      "file": "references/patterns.md",
+      "line": 94,
+      "match": "Strengthen when the loose type forces a lie at a use site. The tells are `!`, `arr[0] as T`, and a \"should never happ...",
+      "description": "inline-shell auto-exec snippet (expands via bash -c on skill view/load)"
+    }
+  ],
+  "rules": [
+    "inline_shell_exec"
+  ],
+  "scanned_at": "2026-10-15T12:35:53.307401+00:00",
+  "summary": "typescript-best-practices: caution \u2014 1 finding(s) in execution",
+  "fresh": true
+}

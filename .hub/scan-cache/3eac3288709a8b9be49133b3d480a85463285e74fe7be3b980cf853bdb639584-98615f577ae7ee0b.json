@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:3eac3288709a8b9be49133b3d480a85463285e74fe7be3b980cf853bdb639584",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-never-block-on-the-human/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-never-block-on-the-human/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:32:39.974941+00:00",
+  "summary": "principle-never-block-on-the-human: clean scan, no threats detected",
+  "fresh": true
+}

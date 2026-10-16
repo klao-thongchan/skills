@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:6880588417d8857289c012345c744a1a480c7d8c3b7f82b59db9623824e6c0de",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-fix-root-causes/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-fix-root-causes/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:29.406690+00:00",
+  "summary": "principle-fix-root-causes: clean scan, no threats detected",
+  "fresh": true
+}

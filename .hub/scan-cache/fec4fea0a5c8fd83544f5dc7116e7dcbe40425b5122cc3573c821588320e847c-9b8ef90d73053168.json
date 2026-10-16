@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:fec4fea0a5c8fd83544f5dc7116e7dcbe40425b5122cc3573c821588320e847c",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-foundational-thinking/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-foundational-thinking/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:38.498111+00:00",
+  "summary": "principle-foundational-thinking: clean scan, no threats detected",
+  "fresh": true
+}

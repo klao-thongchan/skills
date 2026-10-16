@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:b78e78e70a429c5f6f4378c2316844f12a35e6a7c93c39ac68ba7d38c8517168",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:33:14.682870+00:00",
+  "summary": "principle-separate-before-serializing-shared-state: clean scan, no threats detected",
+  "fresh": true
+}

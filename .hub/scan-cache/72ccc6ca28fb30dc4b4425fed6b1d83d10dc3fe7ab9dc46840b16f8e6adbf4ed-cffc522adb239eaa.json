@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:72ccc6ca28fb30dc4b4425fed6b1d83d10dc3fe7ab9dc46840b16f8e6adbf4ed",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/maintain-verification-skill/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/maintain-verification-skill/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:29:48.759274+00:00",
+  "summary": "maintain-verification-skill: clean scan, no threats detected",
+  "fresh": true
+}

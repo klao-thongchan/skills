@@ -123,9 +123,15 @@ If the user says "12 12 10", store:
 sets: 3
 reps: [12, 12, 10]
 
+If the user specifies reps and sets with explicit unit markers (e.g., "12rep, 5set" or "3 set, 20 rep"), bind numbers strictly to their unit tokens (`rep`/`reps` vs `set`/`sets`), not by token order:
+- "12rep, 5set" → `sets: 5`, `reps: [12, 12, 12, 12, 12]` (do NOT treat the first number as sets)
+- "3 set, 20 rep" → `sets: 3`, `reps: [20, 20, 20]`
+
+After appending to `workout_log.jsonl`, verify that the record parses cleanly as JSON and increments the record count before confirming.
+
 Append every workout to workout_log.jsonl.
 
-Update exercise_profiles.yaml with the latest known state for that exercise.
+Update exercise_profiles.yaml with the latest known state for that exercise. When updating exercise_profiles.yaml, upsert the specific exercise entry or regenerate across the full workout_log.jsonl. Never overwrite the profiles file with only the current exercise, which destroys historical exercise profiles.
 
 Never delete or overwrite historical log entries unless the user explicitly asks for correction.
 
@@ -196,22 +202,56 @@ Do not invent records.
 
 ## Logging Reply Format
 
+Only include "Missing useful data" if useful fields (RPE, pain, form) were omitted.
+
+### Strength / Machine Reply Format
+
 Saved.
 
 Exercise:
 - Name:
 - Weight:
 - Sets/Reps:
+- RPE:
 - Body parts:
+- Pain:
+- Form:
 
 Next:
 - Conservative:
 - Progression:
 
-Missing useful data:
-- RPE
-- Form quality
-- Pain/discomfort
+### Cardio Reply Format
+
+Saved.
+
+Workout:
+- Exercise:
+- Duration:
+- Incline:
+- Speed:
+- Distance:
+- Average heart rate:
+- Pain:
+- Form:
+
+Next:
+- Conservative:
+- Progression:
+
+## Macro Progress & Goal Review Queries
+
+When the user asks to analyze past records or how to improve toward a goal:
+
+1. Query and aggregate all entries across `workout_log.jsonl` by exercise.
+2. Group by exercise category (lower body, upper body, cardio/conditioning).
+3. Compute concrete deltas between first and latest sessions (load, sets, reps, RPE).
+4. Identify structural bottlenecks:
+   - High variety / low frequency (many exercises done only 1–2 times without progressive overload).
+   - High RPE clustering (consistently working at RPE 9–10 instead of building volume at RPE 7–8).
+   - Pain or fatigue flags (e.g. lower back discomfort on high-impact/stair equipment).
+5. Recommend a consolidated routine (e.g. alternating A/B template with fixed machine movements) and double-progression rules.
+6. Verify the core objective (e.g., fat loss vs. hypertrophy vs. back resilience) if not specified in the logs, and prompt for target clarification before prescribing specific volume targets.
 
 ## Recall Reply Format
 

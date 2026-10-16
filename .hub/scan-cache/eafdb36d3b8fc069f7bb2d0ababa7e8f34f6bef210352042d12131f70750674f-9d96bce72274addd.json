@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:eafdb36d3b8fc069f7bb2d0ababa7e8f34f6bef210352042d12131f70750674f",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-redesign-from-first-principles/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-redesign-from-first-principles/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:33:05.885875+00:00",
+  "summary": "principle-redesign-from-first-principles: clean scan, no threats detected",
+  "fresh": true
+}

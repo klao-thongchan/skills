@@ -23,6 +23,7 @@ What makes Hermes different:
 - **Multi-platform gateway** — the same agent runs on Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Email, and 10+ other platforms with full tool access, not just chat.
 - **Provider-agnostic** — swap models and providers mid-workflow without changing anything else. Credential pools rotate across multiple API keys automatically.
 - **Profiles** — run multiple independent Hermes instances with isolated configs, sessions, skills, and memory.
+- **Bot Mode & Gateway** — desktop Bot Mode presents profiles as a roster of named Bots with persistent Bot Chats, avatars, routines, and bot-to-bot messaging; the multi-platform gateway connects messaging bots (Telegram, Discord, Slack, etc.) to profiles.
 - **Extensible** — plugins, MCP servers, custom tools, webhook triggers, cron scheduling, and the full Python ecosystem.
 
 People use Hermes for software development, research, system administration, data analysis, content creation, home automation, and anything else that benefits from an AI agent with persistent context and full system access.

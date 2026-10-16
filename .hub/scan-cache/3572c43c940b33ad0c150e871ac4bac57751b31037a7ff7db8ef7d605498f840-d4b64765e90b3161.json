@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:3572c43c940b33ad0c150e871ac4bac57751b31037a7ff7db8ef7d605498f840",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-laziness-protocol/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-laziness-protocol/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:55.904603+00:00",
+  "summary": "principle-laziness-protocol: clean scan, no threats detected",
+  "fresh": true
+}

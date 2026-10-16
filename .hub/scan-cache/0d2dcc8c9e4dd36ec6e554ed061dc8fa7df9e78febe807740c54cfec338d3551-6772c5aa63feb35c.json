@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:0d2dcc8c9e4dd36ec6e554ed061dc8fa7df9e78febe807740c54cfec338d3551",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/blast-radius/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/blast-radius/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:28:26.950754+00:00",
+  "summary": "blast-radius: clean scan, no threats detected",
+  "fresh": true
+}

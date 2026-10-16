@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:b1c37aedb4240f8f9176c12706a082d7af150bccac6cbc918e093d93596b13fe",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-make-operations-idempotent/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-make-operations-idempotent/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:32:04.632533+00:00",
+  "summary": "principle-make-operations-idempotent: clean scan, no threats detected",
+  "fresh": true
+}

@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:8853f261c573a5845877669498e24c522ef28aece7e155a0e602da6c6eb8ebaa",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/ketchup/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/ketchup/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:29:40.040583+00:00",
+  "summary": "ketchup: clean scan, no threats detected",
+  "fresh": true
+}

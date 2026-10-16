@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:46df6c0c82086551cafc201d375c5c6539f76a8c0b33136edffe0928d38d632e",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-boundary-discipline/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-boundary-discipline/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:30:34.915044+00:00",
+  "summary": "principle-boundary-discipline: clean scan, no threats detected",
+  "fresh": true
+}

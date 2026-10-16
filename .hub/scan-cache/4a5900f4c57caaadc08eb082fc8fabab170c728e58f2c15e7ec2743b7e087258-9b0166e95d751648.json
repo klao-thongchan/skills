@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:4a5900f4c57caaadc08eb082fc8fabab170c728e58f2c15e7ec2743b7e087258",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-help/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-help/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:30:17.102189+00:00",
+  "summary": "poteto-help: clean scan, no threats detected",
+  "fresh": true
+}

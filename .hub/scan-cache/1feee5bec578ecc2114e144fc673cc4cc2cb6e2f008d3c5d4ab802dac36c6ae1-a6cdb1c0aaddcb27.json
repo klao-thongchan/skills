@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:1feee5bec578ecc2114e144fc673cc4cc2cb6e2f008d3c5d4ab802dac36c6ae1",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-experience-first/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-experience-first/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:31:11.101765+00:00",
+  "summary": "principle-experience-first: clean scan, no threats detected",
+  "fresh": true
+}

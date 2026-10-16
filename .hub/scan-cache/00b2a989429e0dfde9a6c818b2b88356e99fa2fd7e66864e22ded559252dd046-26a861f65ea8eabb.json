@@ -1,0 +1,44 @@
+{
+  "bundle_hash": "sha256:00b2a989429e0dfde9a6c818b2b88356e99fa2fd7e66864e22ded559252dd046",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/make-bot-ui/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/make-bot-ui/SKILL.md",
+  "verdict": "dangerous",
+  "trust_level": "community",
+  "findings": [
+    {
+      "pattern_id": "curl_pipe_shell",
+      "severity": "critical",
+      "category": "supply_chain",
+      "file": "SKILL.md",
+      "line": 89,
+      "match": "curl -fsSL https://tailscale.com/install.sh | sudo sh",
+      "description": "curl piped to shell (download-and-execute)"
+    },
+    {
+      "pattern_id": "sudo_usage",
+      "severity": "medium",
+      "category": "privilege_escalation",
+      "file": "SKILL.md",
+      "line": 89,
+      "match": "curl -fsSL https://tailscale.com/install.sh | sudo sh",
+      "description": "uses sudo (privilege escalation) (not executed on install; informational)"
+    },
+    {
+      "pattern_id": "sudo_usage",
+      "severity": "medium",
+      "category": "privilege_escalation",
+      "file": "SKILL.md",
+      "line": 95,
+      "match": "sudo tailscale up --hostname=<short-name> --accept-dns=false --ssh=false",
+      "description": "uses sudo (privilege escalation) (not executed on install; informational)"
+    }
+  ],
+  "rules": [
+    "curl_pipe_shell",
+    "sudo_usage"
+  ],
+  "scanned_at": "2026-10-15T12:29:57.462050+00:00",
+  "summary": "make-bot-ui: dangerous \u2014 3 finding(s) in privilege_escalation, supply_chain",
+  "fresh": true
+}

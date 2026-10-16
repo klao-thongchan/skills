@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:848368f24231e2fed1740263b95f58b313eeb9cd6987927ff4c3ce6a78677968",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-sequence-verifiable-units/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-sequence-verifiable-units/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-15T12:33:24.227131+00:00",
+  "summary": "principle-sequence-verifiable-units: clean scan, no threats detected",
+  "fresh": true
+}

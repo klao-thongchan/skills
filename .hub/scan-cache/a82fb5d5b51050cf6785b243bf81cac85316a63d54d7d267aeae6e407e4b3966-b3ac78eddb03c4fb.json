@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:a82fb5d5b51050cf6785b243bf81cac85316a63d54d7d267aeae6e407e4b3966",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/arena/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/arena/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-18T22:40:09.739255+00:00",
+  "summary": "arena: clean scan, no threats detected",
+  "fresh": true
+}

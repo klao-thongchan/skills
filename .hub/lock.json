@@ -3862,7 +3862,7 @@
       "identifier": "official/creative/baoyu-article-illustrator",
       "trust_level": "builtin",
       "scan_verdict": "safe",
-      "content_hash": "sha256:49c09a0ee50b2e59",
+      "content_hash": "sha256:d975461d0367629d",
       "install_path": "creative/baoyu-article-illustrator",
       "files": [
         "SKILL.md",
@@ -3872,6 +3872,7 @@
         "references/workflow.md",
         "references/prompt-construction.md",
         "references/style-presets.md",
+        "prompts/system.md",
         "references/styles/editorial.md",
         "references/styles/flat-doodle.md",
         "references/styles/intuition-machine.md",
@@ -3898,25 +3899,24 @@
         "references/palettes/macaron.md",
         "references/palettes/warm.md",
         "references/palettes/mono-ink.md",
-        "references/palettes/neon.md",
-        "prompts/system.md"
+        "references/palettes/neon.md"
       ],
       "metadata": {},
       "scan_provenance": {
+        "bundle_hash": "sha256:d975461d0367629d028483a5a08140dbb44f88486b40a5832397eb76360d9259",
+        "scanner_version": "skills-guard-v10",
         "source": "official",
         "source_url": "official/creative/baoyu-article-illustrator",
-        "bundle_hash": "sha256:49c09a0ee50b2e59857ba4b5e414e3b6abfcce4a1f037ef248df39abe3bb1ac1",
-        "scanner_version": "skills-guard-v1",
         "verdict": "safe",
         "trust_level": "builtin",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-07-23T11:21:38.019704+00:00",
+        "scanned_at": "2026-10-18T22:40:16.159227+00:00",
         "summary": "baoyu-article-illustrator: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-07-23T11:21:38.026107+00:00",
-      "updated_at": "2026-07-23T11:21:38.026113+00:00"
+      "installed_at": "2026-10-18T22:40:16.167679+00:00",
+      "updated_at": "2026-10-18T22:40:16.167679+00:00"
     },
     "baoyu-comic": {
       "source": "official",
@@ -4105,128 +4105,6 @@
       },
       "installed_at": "2026-10-15T05:08:36.931456+00:00",
       "updated_at": "2026-10-15T05:08:36.931456+00:00"
-    },
-    "minecraft-modpack-server": {
-      "source": "official",
-      "identifier": "official/gaming/minecraft-modpack-server",
-      "trust_level": "builtin",
-      "scan_verdict": "caution",
-      "content_hash": "sha256:86334ae63b0b58b1",
-      "install_path": "gaming/minecraft-modpack-server",
-      "files": [
-        "SKILL.md"
-      ],
-      "metadata": {},
-      "scan_provenance": {
-        "bundle_hash": "sha256:86334ae63b0b58b1712766cf3894bb896f6424794a201fe384da6e963a181c29",
-        "scanner_version": "skills-guard-v2",
-        "source": "official",
-        "source_url": "official/gaming/minecraft-modpack-server",
-        "verdict": "caution",
-        "trust_level": "builtin",
-        "findings": [
-          {
-            "pattern_id": "persistence_cron",
-            "severity": "medium",
-            "category": "persistence",
-            "file": "SKILL.md",
-            "line": 173,
-            "match": "(crontab -l 2>/dev/null | grep -v \"minecraft/backup.sh\"; echo \"0 * * * * $HOME/minecraft-server/backup.sh >> $HOME/mi...",
-            "description": "modifies cron jobs"
-          },
-          {
-            "pattern_id": "unicode_escape_chain",
-            "severity": "medium",
-            "category": "obfuscation",
-            "file": "SKILL.md",
-            "line": 71,
-            "match": "motd=\\u00a7b\\u00a7lServer Name \\u00a7r\\u00a78| \\u00a7aModpack Name",
-            "description": "chain of unicode escapes (possible obfuscation)"
-          },
-          {
-            "pattern_id": "sudo_usage",
-            "severity": "high",
-            "category": "privilege_escalation",
-            "file": "SKILL.md",
-            "line": 48,
-            "match": "- Minecraft 1.21+ → Java 21: `sudo apt install openjdk-21-jre-headless`",
-            "description": "uses sudo (privilege escalation)"
-          },
-          {
-            "pattern_id": "sudo_usage",
-            "severity": "high",
-            "category": "privilege_escalation",
-            "file": "SKILL.md",
-            "line": 49,
-            "match": "- Minecraft 1.18-1.20 → Java 17: `sudo apt install openjdk-17-jre-headless`",
-            "description": "uses sudo (privilege escalation)"
-          },
-          {
-            "pattern_id": "sudo_usage",
-            "severity": "high",
-            "category": "privilege_escalation",
-            "file": "SKILL.md",
-            "line": 50,
-            "match": "- Minecraft 1.16 and below → Java 8: `sudo apt install openjdk-8-jre-headless`",
-            "description": "uses sudo (privilege escalation)"
-          },
-          {
-            "pattern_id": "sudo_usage",
-            "severity": "high",
-            "category": "privilege_escalation",
-            "file": "SKILL.md",
-            "line": 128,
-            "match": "sudo ufw allow 25565/tcp comment \"Minecraft Server\"",
-            "description": "uses sudo (privilege escalation)"
-          },
-          {
-            "pattern_id": "sudo_usage",
-            "severity": "high",
-            "category": "privilege_escalation",
-            "file": "SKILL.md",
-            "line": 130,
-            "match": "Check with: `sudo ufw status | grep 25565`",
-            "description": "uses sudo (privilege escalation)"
-          }
-        ],
-        "rules": [
-          "persistence_cron",
-          "sudo_usage",
-          "unicode_escape_chain"
-        ],
-        "scanned_at": "2026-09-10T03:19:24.291679+00:00",
-        "summary": "minecraft-modpack-server: caution — 7 finding(s) in obfuscation, persistence, privilege_escalation",
-        "fresh": true
-      },
-      "installed_at": "2026-09-10T03:19:24.304186+00:00",
-      "updated_at": "2026-09-10T03:19:24.304186+00:00"
-    },
-    "pokemon-player": {
-      "source": "official",
-      "identifier": "official/gaming/pokemon-player",
-      "trust_level": "builtin",
-      "scan_verdict": "safe",
-      "content_hash": "sha256:7c5ab083994e0a0c",
-      "install_path": "gaming/pokemon-player",
-      "files": [
-        "SKILL.md"
-      ],
-      "metadata": {},
-      "scan_provenance": {
-        "bundle_hash": "sha256:7c5ab083994e0a0c056f5172fd6a6c05ca3e0e07facabc38c92a8438de422623",
-        "scanner_version": "skills-guard-v5",
-        "source": "official",
-        "source_url": "official/gaming/pokemon-player",
-        "verdict": "safe",
-        "trust_level": "builtin",
-        "findings": [],
-        "rules": [],
-        "scanned_at": "2026-09-20T08:25:20.450678+00:00",
-        "summary": "pokemon-player: clean scan, no threats detected",
-        "fresh": true
-      },
-      "installed_at": "2026-09-20T08:25:20.459851+00:00",
-      "updated_at": "2026-09-20T08:25:20.459851+00:00"
     },
     "dspy": {
       "source": "official",
@@ -4977,7 +4855,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-mode/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:f4e32fc269da8d91",
+      "content_hash": "sha256:e47cdcbf448ddc5d",
       "install_path": "poteto-mode",
       "files": [
         "SKILL.md",
@@ -4989,7 +4867,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:f4e32fc269da8d91486cf9dcd246f460a09439b681f516421103cb6c04db1841",
+        "bundle_hash": "sha256:e47cdcbf448ddc5dad9a5b1de3454ba59b6ee0576417bac62232e9018cab7e8c",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-mode/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-mode/SKILL.md",
@@ -4997,12 +4875,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:27:37.516858+00:00",
+        "scanned_at": "2026-10-18T22:40:09.409858+00:00",
         "summary": "poteto-mode: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:27:37.523323+00:00",
-      "updated_at": "2026-10-15T12:27:37.523323+00:00"
+      "installed_at": "2026-10-18T22:40:09.418302+00:00",
+      "updated_at": "2026-10-18T22:40:09.418302+00:00"
     },
     "architect": {
       "source": "url",
@@ -5043,7 +4921,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/arena/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:cf8d4ad5e5cc7b90",
+      "content_hash": "sha256:a82fb5d5b51050cf",
       "install_path": "arena",
       "files": [
         "SKILL.md"
@@ -5054,7 +4932,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:cf8d4ad5e5cc7b903fffa264a5d16fda6942c59c2c627a763180828222246c69",
+        "bundle_hash": "sha256:a82fb5d5b51050cf6785b243bf81cac85316a63d54d7d267aeae6e407e4b3966",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/arena/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/arena/SKILL.md",
@@ -5062,19 +4940,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:28:00.227732+00:00",
+        "scanned_at": "2026-10-18T22:40:09.739255+00:00",
         "summary": "arena: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:28:00.235804+00:00",
-      "updated_at": "2026-10-15T12:28:00.235804+00:00"
+      "installed_at": "2026-10-18T22:40:09.741685+00:00",
+      "updated_at": "2026-10-18T22:40:09.741685+00:00"
     },
     "automate-me": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/automate-me/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:a63d10a4d544b9a2",
+      "content_hash": "sha256:4b2d783db6fa57a7",
       "install_path": "automate-me",
       "files": [
         "SKILL.md"
@@ -5085,7 +4963,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:a63d10a4d544b9a2cbe6717143842a6c1b103aed5fddb48c3ebb94716e3d0210",
+        "bundle_hash": "sha256:4b2d783db6fa57a7c3c407ed0d122ec64c3e54b913e001195e2a9c670b4bd166",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/automate-me/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/automate-me/SKILL.md",
@@ -5093,12 +4971,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:28:09.154360+00:00",
+        "scanned_at": "2026-10-18T22:40:09.829224+00:00",
         "summary": "automate-me: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:28:09.161236+00:00",
-      "updated_at": "2026-10-15T12:28:09.161236+00:00"
+      "installed_at": "2026-10-18T22:40:09.831345+00:00",
+      "updated_at": "2026-10-18T22:40:09.831345+00:00"
     },
     "benchmark-checklist": {
       "source": "url",
@@ -5198,7 +5076,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/correct/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:c77d9984c8c832df",
+      "content_hash": "sha256:de993b587055a83a",
       "install_path": "correct",
       "files": [
         "SKILL.md"
@@ -5209,7 +5087,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:c77d9984c8c832df37eaab9ee29134a1be28f7a510c4d383c969ab722008c162",
+        "bundle_hash": "sha256:de993b587055a83a470ef481c6c7b9b03b8c23e2d76d503d00dc790edfe867c1",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/correct/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/correct/SKILL.md",
@@ -5217,12 +5095,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:28:44.093541+00:00",
+        "scanned_at": "2026-10-18T22:40:09.912283+00:00",
         "summary": "correct: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:28:44.103871+00:00",
-      "updated_at": "2026-10-15T12:28:44.103871+00:00"
+      "installed_at": "2026-10-18T22:40:09.914810+00:00",
+      "updated_at": "2026-10-18T22:40:09.914810+00:00"
     },
     "create-verification-skill": {
       "source": "url",
@@ -5260,7 +5138,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/figure-it-out/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:6183496dac90984a",
+      "content_hash": "sha256:01113f790153d5ba",
       "install_path": "figure-it-out",
       "files": [
         "SKILL.md"
@@ -5271,7 +5149,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:6183496dac90984a57a4fed0a792464850e9a93af39531f1445f50fa2cb43f94",
+        "bundle_hash": "sha256:01113f790153d5ba476707d142997493aea4031b6bac86bf2f4eb507eb5e6621",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/figure-it-out/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/figure-it-out/SKILL.md",
@@ -5279,19 +5157,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:29:02.688538+00:00",
+        "scanned_at": "2026-10-18T22:40:10.002551+00:00",
         "summary": "figure-it-out: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:29:02.698272+00:00",
-      "updated_at": "2026-10-15T12:29:02.698272+00:00"
+      "installed_at": "2026-10-18T22:40:10.004785+00:00",
+      "updated_at": "2026-10-18T22:40:10.004785+00:00"
     },
     "how": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/how/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:2a0d1fe49f333b07",
+      "content_hash": "sha256:1ebc6098bd5ec306",
       "install_path": "how",
       "files": [
         "SKILL.md",
@@ -5304,7 +5182,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:2a0d1fe49f333b079aa6bb56b5a8ac07eefe0e6efa20db5e33227eab5daf32f1",
+        "bundle_hash": "sha256:1ebc6098bd5ec306bbace3b3da8529a29396e782a5d2340862381fea79b7c52f",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/how/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/how/SKILL.md",
@@ -5312,12 +5190,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:29:12.417710+00:00",
+        "scanned_at": "2026-10-18T22:40:10.117067+00:00",
         "summary": "how: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:29:12.424026+00:00",
-      "updated_at": "2026-10-15T12:29:12.424026+00:00"
+      "installed_at": "2026-10-18T22:40:10.119839+00:00",
+      "updated_at": "2026-10-18T22:40:10.119839+00:00"
     },
     "in-your-own-words": {
       "source": "url",
@@ -5355,7 +5233,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/interrogate/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:3e530acd3d12859a",
+      "content_hash": "sha256:511e3a97d73e8e74",
       "install_path": "interrogate",
       "files": [
         "SKILL.md",
@@ -5370,7 +5248,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:3e530acd3d12859a624c703c5bd23a693666631b229ce9fa3c0e68fdd7ceaaed",
+        "bundle_hash": "sha256:511e3a97d73e8e74776f738ea5daa46f3f0d45ebc7f1505ce97f847c61338013",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/interrogate/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/interrogate/SKILL.md",
@@ -5378,19 +5256,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:29:31.635515+00:00",
+        "scanned_at": "2026-10-18T22:40:10.336341+00:00",
         "summary": "interrogate: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:29:31.640856+00:00",
-      "updated_at": "2026-10-15T12:29:31.640856+00:00"
+      "installed_at": "2026-10-18T22:40:10.341197+00:00",
+      "updated_at": "2026-10-18T22:40:10.341197+00:00"
     },
     "ketchup": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/ketchup/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:8853f261c573a584",
+      "content_hash": "sha256:435bfec431b857b8",
       "install_path": "ketchup",
       "files": [
         "SKILL.md"
@@ -5401,7 +5279,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:8853f261c573a5845877669498e24c522ef28aece7e155a0e602da6c6eb8ebaa",
+        "bundle_hash": "sha256:435bfec431b857b8b8a05610bc5bd3bbcff7e92b743f7e4b91c72d0fb9805ef8",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/ketchup/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/ketchup/SKILL.md",
@@ -5409,12 +5287,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:29:40.040583+00:00",
+        "scanned_at": "2026-10-18T22:40:10.430581+00:00",
         "summary": "ketchup: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:29:40.048178+00:00",
-      "updated_at": "2026-10-15T12:29:40.048178+00:00"
+      "installed_at": "2026-10-18T22:40:10.432794+00:00",
+      "updated_at": "2026-10-18T22:40:10.432794+00:00"
     },
     "maintain-verification-skill": {
       "source": "url",
@@ -5452,7 +5330,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/no-comments/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:daa4a4ec515333e4",
+      "content_hash": "sha256:3686b12805f6ea53",
       "install_path": "no-comments",
       "files": [
         "SKILL.md",
@@ -5464,7 +5342,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:daa4a4ec515333e48885bd382d4ed0a2ce3b5ce8848d3f6776e26cf55add4a14",
+        "bundle_hash": "sha256:3686b12805f6ea53d820123460d2cf44345414f1994f2891f2080111463dba65",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/no-comments/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/no-comments/SKILL.md",
@@ -5472,19 +5350,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:30:06.564027+00:00",
+        "scanned_at": "2026-10-18T22:40:10.536611+00:00",
         "summary": "no-comments: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:30:06.567792+00:00",
-      "updated_at": "2026-10-15T12:30:06.567792+00:00"
+      "installed_at": "2026-10-18T22:40:10.539266+00:00",
+      "updated_at": "2026-10-18T22:40:10.539266+00:00"
     },
     "poteto-help": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-help/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:4a5900f4c57caaad",
+      "content_hash": "sha256:aa2cfe328cf97133",
       "install_path": "poteto-help",
       "files": [
         "SKILL.md",
@@ -5497,7 +5375,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:4a5900f4c57caaadc08eb082fc8fabab170c728e58f2c15e7ec2743b7e087258",
+        "bundle_hash": "sha256:aa2cfe328cf97133a5a0155fa9dd676ab0856e29247f93edf539f9eeb24a648f",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-help/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/poteto-help/SKILL.md",
@@ -5505,19 +5383,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:30:17.102189+00:00",
+        "scanned_at": "2026-10-18T22:40:10.765843+00:00",
         "summary": "poteto-help: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:30:17.107653+00:00",
-      "updated_at": "2026-10-15T12:30:17.107653+00:00"
+      "installed_at": "2026-10-18T22:40:10.769372+00:00",
+      "updated_at": "2026-10-18T22:40:10.769372+00:00"
     },
     "principle-attack-the-premise": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-attack-the-premise/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:2597d156f5142501",
+      "content_hash": "sha256:796880c3c1bb9251",
       "install_path": "principle-attack-the-premise",
       "files": [
         "SKILL.md"
@@ -5528,7 +5406,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:2597d156f5142501c38c3e26011cea3a5fd342fb3e70273d67635ab322136ece",
+        "bundle_hash": "sha256:796880c3c1bb92510bab64b66c2cc721945dc91ed1a3ea73a17f4c074b7ec122",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-attack-the-premise/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-attack-the-premise/SKILL.md",
@@ -5536,12 +5414,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:30:25.713950+00:00",
+        "scanned_at": "2026-10-18T22:40:10.853678+00:00",
         "summary": "principle-attack-the-premise: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:30:25.722838+00:00",
-      "updated_at": "2026-10-15T12:30:25.722838+00:00"
+      "installed_at": "2026-10-18T22:40:10.855863+00:00",
+      "updated_at": "2026-10-18T22:40:10.855863+00:00"
     },
     "principle-boundary-discipline": {
       "source": "url",
@@ -5734,7 +5612,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-fix-root-causes/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:6880588417d88572",
+      "content_hash": "sha256:f3dd61ff3108a4cb",
       "install_path": "principle-fix-root-causes",
       "files": [
         "SKILL.md"
@@ -5745,7 +5623,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:6880588417d8857289c012345c744a1a480c7d8c3b7f82b59db9623824e6c0de",
+        "bundle_hash": "sha256:f3dd61ff3108a4cb88410445cf1d9901bf3775f23e8d30afa6d646b46fa89823",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-fix-root-causes/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-fix-root-causes/SKILL.md",
@@ -5753,12 +5631,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:31:29.406690+00:00",
+        "scanned_at": "2026-10-18T22:40:10.939170+00:00",
         "summary": "principle-fix-root-causes: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:31:29.418240+00:00",
-      "updated_at": "2026-10-15T12:31:29.418240+00:00"
+      "installed_at": "2026-10-18T22:40:10.941410+00:00",
+      "updated_at": "2026-10-18T22:40:10.941410+00:00"
     },
     "principle-foundational-thinking": {
       "source": "url",
@@ -5858,7 +5736,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-make-operations-idempotent/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:b1c37aedb4240f8f",
+      "content_hash": "sha256:99df395fb125d41c",
       "install_path": "principle-make-operations-idempotent",
       "files": [
         "SKILL.md"
@@ -5869,7 +5747,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:b1c37aedb4240f8f9176c12706a082d7af150bccac6cbc918e093d93596b13fe",
+        "bundle_hash": "sha256:99df395fb125d41c67bcdc42b99c42b677c98b094a3b4c355aad8f7ecdaea5ef",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-make-operations-idempotent/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-make-operations-idempotent/SKILL.md",
@@ -5877,12 +5755,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:32:04.632533+00:00",
+        "scanned_at": "2026-10-18T22:40:11.030724+00:00",
         "summary": "principle-make-operations-idempotent: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:32:04.643275+00:00",
-      "updated_at": "2026-10-15T12:32:04.643275+00:00"
+      "installed_at": "2026-10-18T22:40:11.033278+00:00",
+      "updated_at": "2026-10-18T22:40:11.033278+00:00"
     },
     "principle-migrate-callers-then-delete-legacy-apis": {
       "source": "url",
@@ -6199,7 +6077,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-test-behavior-not-implementation/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:525a3f50315addb9",
+      "content_hash": "sha256:49e46ed5cad52506",
       "install_path": "principle-test-behavior-not-implementation",
       "files": [
         "SKILL.md"
@@ -6210,7 +6088,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:525a3f50315addb9ed69409a06da61fc3c5fd44fd1c9b8b90a27944527b8ff97",
+        "bundle_hash": "sha256:49e46ed5cad525060729b85249120422848c279f50e81f02e749ac939e69e596",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-test-behavior-not-implementation/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-test-behavior-not-implementation/SKILL.md",
@@ -6218,12 +6096,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:33:42.848556+00:00",
+        "scanned_at": "2026-10-18T22:40:11.113362+00:00",
         "summary": "principle-test-behavior-not-implementation: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:33:42.860561+00:00",
-      "updated_at": "2026-10-15T12:33:42.860561+00:00"
+      "installed_at": "2026-10-18T22:40:11.115571+00:00",
+      "updated_at": "2026-10-18T22:40:11.115571+00:00"
     },
     "principle-type-system-discipline": {
       "source": "url",
@@ -6261,7 +6139,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/recall/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:04af289603912214",
+      "content_hash": "sha256:6860c20bd1cb05f2",
       "install_path": "recall",
       "files": [
         "SKILL.md"
@@ -6272,7 +6150,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:04af289603912214f93a1d3a7d84c6d5c54745f12f78291c8cadf5a87f7feef4",
+        "bundle_hash": "sha256:6860c20bd1cb05f2ba898f4f45663c3e059d368748792443437ec90f75573b8d",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/recall/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/recall/SKILL.md",
@@ -6280,19 +6158,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:34:01.023359+00:00",
+        "scanned_at": "2026-10-18T22:40:11.291938+00:00",
         "summary": "recall: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:34:01.031081+00:00",
-      "updated_at": "2026-10-15T12:34:01.031081+00:00"
+      "installed_at": "2026-10-18T22:40:11.296570+00:00",
+      "updated_at": "2026-10-18T22:40:11.296570+00:00"
     },
     "reflect": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/reflect/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:631c6090c39f53c6",
+      "content_hash": "sha256:bba2045c6df38476",
       "install_path": "reflect",
       "files": [
         "SKILL.md",
@@ -6307,7 +6185,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:631c6090c39f53c65a625b0b76d9c6da7465bdc66a26357ed7d14b8f27985c30",
+        "bundle_hash": "sha256:bba2045c6df3847650cd98fb3bf437af66def6b5c76a8ce3ea7a593c46f213f1",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/reflect/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/reflect/SKILL.md",
@@ -6315,12 +6193,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:34:11.846564+00:00",
+        "scanned_at": "2026-10-18T22:40:11.471954+00:00",
         "summary": "reflect: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:34:11.851687+00:00",
-      "updated_at": "2026-10-15T12:34:11.851687+00:00"
+      "installed_at": "2026-10-18T22:40:11.474943+00:00",
+      "updated_at": "2026-10-18T22:40:11.474943+00:00"
     },
     "setup-pstack": {
       "source": "url",
@@ -6358,7 +6236,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/show-me-your-work/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:99a56d26a3ef5f18",
+      "content_hash": "sha256:17b32ba5cfca5ce1",
       "install_path": "show-me-your-work",
       "files": [
         "SKILL.md",
@@ -6371,7 +6249,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:99a56d26a3ef5f181b82ae3cb6bd9e7299cbed20a8d396e43a92a52fe830c414",
+        "bundle_hash": "sha256:17b32ba5cfca5ce1f601ea9f2305d8391f7d4b97b208edebe7b41f58c9e73da1",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/show-me-your-work/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/show-me-your-work/SKILL.md",
@@ -6379,19 +6257,19 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:34:31.388137+00:00",
+        "scanned_at": "2026-10-18T22:40:11.603576+00:00",
         "summary": "show-me-your-work: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:34:31.391943+00:00",
-      "updated_at": "2026-10-15T12:34:31.391943+00:00"
+      "installed_at": "2026-10-18T22:40:11.606655+00:00",
+      "updated_at": "2026-10-18T22:40:11.606655+00:00"
     },
     "swarm": {
       "source": "url",
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/swarm/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:9414f49227c79dab",
+      "content_hash": "sha256:f85345075e095b63",
       "install_path": "swarm",
       "files": [
         "SKILL.md"
@@ -6402,7 +6280,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:9414f49227c79dabf1870efdea20841df12ea064b2dcef359fe895037e584d7e",
+        "bundle_hash": "sha256:f85345075e095b633737f401355ccd3600c0434cbec105030b3236fb670183bc",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/swarm/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/swarm/SKILL.md",
@@ -6410,12 +6288,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:34:42.859062+00:00",
+        "scanned_at": "2026-10-18T22:40:11.783276+00:00",
         "summary": "swarm: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:34:42.867906+00:00",
-      "updated_at": "2026-10-15T12:34:42.867906+00:00"
+      "installed_at": "2026-10-18T22:40:11.786773+00:00",
+      "updated_at": "2026-10-18T22:40:11.786773+00:00"
     },
     "technical-writing": {
       "source": "url",
@@ -6484,7 +6362,7 @@
       "identifier": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/why/SKILL.md",
       "trust_level": "community",
       "scan_verdict": "safe",
-      "content_hash": "sha256:526f9e17b1545006",
+      "content_hash": "sha256:cd32236d9f1637ec",
       "install_path": "why",
       "files": [
         "SKILL.md",
@@ -6500,7 +6378,7 @@
         "awaiting_name": false
       },
       "scan_provenance": {
-        "bundle_hash": "sha256:526f9e17b1545006beb99caaa648cefacf05d0011cdd17c6211b39e022488bbe",
+        "bundle_hash": "sha256:cd32236d9f1637ec32a67f589d02fe1c9781c111e37c01fa51f9db90a6df5b04",
         "scanner_version": "skills-guard-v10",
         "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/why/SKILL.md",
         "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/why/SKILL.md",
@@ -6508,12 +6386,12 @@
         "trust_level": "community",
         "findings": [],
         "rules": [],
-        "scanned_at": "2026-10-15T12:36:15.065028+00:00",
+        "scanned_at": "2026-10-18T22:40:12.001576+00:00",
         "summary": "why: clean scan, no threats detected",
         "fresh": true
       },
-      "installed_at": "2026-10-15T12:36:15.068767+00:00",
-      "updated_at": "2026-10-15T12:36:15.068767+00:00"
+      "installed_at": "2026-10-18T22:40:12.004746+00:00",
+      "updated_at": "2026-10-18T22:40:12.004746+00:00"
     }
   }
 }

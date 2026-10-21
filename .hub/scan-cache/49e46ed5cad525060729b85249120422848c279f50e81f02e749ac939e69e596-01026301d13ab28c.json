@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:49e46ed5cad525060729b85249120422848c279f50e81f02e749ac939e69e596",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-test-behavior-not-implementation/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-test-behavior-not-implementation/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-18T22:40:11.113362+00:00",
+  "summary": "principle-test-behavior-not-implementation: clean scan, no threats detected",
+  "fresh": true
+}

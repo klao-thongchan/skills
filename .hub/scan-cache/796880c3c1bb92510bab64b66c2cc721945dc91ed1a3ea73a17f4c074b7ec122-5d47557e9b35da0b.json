@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:796880c3c1bb92510bab64b66c2cc721945dc91ed1a3ea73a17f4c074b7ec122",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-attack-the-premise/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-attack-the-premise/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-18T22:40:10.853678+00:00",
+  "summary": "principle-attack-the-premise: clean scan, no threats detected",
+  "fresh": true
+}

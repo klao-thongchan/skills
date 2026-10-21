@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:d975461d0367629d028483a5a08140dbb44f88486b40a5832397eb76360d9259",
+  "scanner_version": "skills-guard-v10",
+  "source": "official",
+  "source_url": "official/creative/baoyu-article-illustrator",
+  "verdict": "safe",
+  "trust_level": "builtin",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-18T22:40:16.159227+00:00",
+  "summary": "baoyu-article-illustrator: clean scan, no threats detected",
+  "fresh": true
+}

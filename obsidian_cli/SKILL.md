@@ -758,7 +758,16 @@ When Klao provides an article or requests an article written into the vault:
 5. Extract durable concepts into `30_Area/` or `31_Technical_Area/` only if requested.
 6. Create workflows in `60_Workflows/` only when the article contains repeatable execution logic.
 7. Create prompts in `70_Prompts/` only when the article contains reusable prompt patterns.
-8. Verify creation by checking note outline or reading lines via Obsidian CLI (`obsidian outline path="..."` or `obsidian read path="..."`).
+8. Verify creation by checking note outline via Obsidian CLI (`obsidian outline path="..."`). Avoid piping large files through `obsidian read` during verification as Obsidian CLI IPC can time out on long notes.
+
+### Visual and Infographic Knowledge Ingestion
+
+When the source input is an image, infographic, or slide deck:
+
+1. **Extract complete data points first:** Transcribe exact metrics, percentages, salary bands, dates, sector trends, and source attributions into markdown tables before drawing conclusions.
+2. **Distinguish claims from verified data:** Third-party graphics frequently cite secondary reports. Include a `## Verification Status` section stating whether original publications were checked or if data reflects the infographic's self-reported figures.
+3. **Analyze mechanisms, not just data points:** Connect observed statistics to underlying causal drivers (e.g., task substitution vs complementarity, entry-level career compression, margin pressure).
+4. **Link to relevant domains:** Connect labor, behavioral economics, or agent trends to active vault areas (`30_Area/`, `31_Technical_Area/`). After a direct filesystem write to an already open note, `obsidian read` may briefly return the cached old content; run `obsidian open path="..."` and read again, then compare with the on-disk file before concluding the edit failed.
 
 Default article note structure:
 

@@ -1,0 +1,13 @@
+{
+  "bundle_hash": "sha256:741bd53ff1884595925461dbad0a83357345efba81eef610646bd4f5fca338cb",
+  "scanner_version": "skills-guard-v10",
+  "source": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-type-system-discipline/SKILL.md",
+  "source_url": "https://raw.githubusercontent.com/backnotprop/pstack/main/skills/principle-type-system-discipline/SKILL.md",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-10-26T23:10:17.738039+00:00",
+  "summary": "principle-type-system-discipline: clean scan, no threats detected",
+  "fresh": true
+}
